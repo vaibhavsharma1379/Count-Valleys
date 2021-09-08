@@ -1,0 +1,20 @@
+level=0
+valleys=0
+def countingValleys(steps, path):
+    global level
+    global valleys
+    for i in range(steps):
+        print(path[i])
+        if path[i]=="U":
+            level+=1
+            if level==0:
+                valleys+=1
+            else:
+                pass
+        else:
+            level-=1
+        print(level)
+    print(valleys)
+steps=int(input())
+path=input()
+result=countingValleys(steps,path)
